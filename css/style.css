@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background for the application */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header (Navbar) */
+header {
+    background-color: #09003f; /* Dark blue color for navbar */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif; /* Use Orbitron font for the logo */
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Content box */
+.content {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.editor {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 300px; /* Adjusted height for better appearance */
+    overflow: hidden;
+}
+
+#line-numbers {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    user-select: none;
+    text-align: right;
+    padding-right: 10px;
+    height: 100%;
+    overflow: auto;
+    width: 50px; /* Fixed width for line numbers */
+    box-sizing: border-box;
+}
+
+#yaml-input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    font-family: monospace;
+    overflow: auto;
+    white-space: pre-wrap; /* Preserve formatting */
+    box-sizing: border-box;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #09003f; /* Dark blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #09003f; /* Darker blue on hover */
+}
+
+/* Output Box */
+pre {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    white-space: pre-wrap; /* Preserve whitespace formatting */
+    text-align: left;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #09003f; /* Dark blue color for footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .editor {
+        height: 200px; /* Reduced height for smaller screens */
+    }
+}
