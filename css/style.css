@@ -1,6 +1,7 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: white; /* White background for the application */
+    background-color: white;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,33 +9,42 @@ body {
     min-height: 100vh;
 }
 
-/* Header (Navbar) */
 header {
-    background-color: #09003f; /* Dark blue color for navbar */
-    color: white;
-    padding: 10px 20px;
+    background-color: #09003f; /* Deep Blue */
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar container */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Logo styling */
 .logo {
-    font-family: 'Orbitron', sans-serif; /* Use Orbitron font for the logo */
-    font-size: 2.5em;
-    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
     color: white;
-    margin-left: 10px;
+    font-weight: bold;
 }
 
+/* Navigation links container */
 .nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
     gap: 30px;
 }
 
+/* Navigation links styling */
 .nav-links li {
     display: inline;
 }
@@ -42,14 +52,40 @@ header {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
+/* Hover effect on links */
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #ff5f1f; /* BuyMeACoffee color */
+    border-bottom: 2px solid #ff5f1f;
 }
 
-/* Main Content */
+/* Call-to-action button (Sign Up) */
+.cta-container {
+    display: flex;
+    align-items: center;
+}
+
+.cta-button {
+    background-color: #ff5f1f; /* BuyMeACoffee color */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    color: #fff;
+    background-color: #ff8c1f; /* Lighter orange on hover */
+}
+
+/* Main content styling */
 main {
     flex: 1;
     display: flex;
@@ -58,22 +94,24 @@ main {
     padding: 20px;
 }
 
-/* Content box */
 .content {
     text-align: center;
     width: 100%;
     max-width: 800px;
 }
 
+/* YAML editor area */
 .editor {
     display: flex;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 20px;
-    height: 300px; /* Adjusted height for better appearance */
+    height: 300px;
     overflow: hidden;
+    position: relative;
 }
 
+/* Line numbers styling */
 #line-numbers {
     padding: 10px;
     background-color: #f4f4f4;
@@ -83,12 +121,15 @@ main {
     padding-right: 10px;
     height: 100%;
     overflow: auto;
-    width: 50px; /* Fixed width for line numbers */
+    width: 50px;
     box-sizing: border-box;
+    position: absolute;
+    left: 0;
 }
 
+/* YAML input field styling */
 #yaml-input {
-    width: 100%;
+    width: calc(100% - 50px); /* Offset to make space for line numbers */
     height: 100%;
     padding: 10px;
     border: none;
@@ -96,15 +137,17 @@ main {
     font-size: 16px;
     font-family: monospace;
     overflow: auto;
-    white-space: pre-wrap; /* Preserve formatting */
+    white-space: nowrap;
     box-sizing: border-box;
+    position: relative;
+    margin-left: 50px;
 }
 
-/* Button Styles */
+/* Button styling */
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #09003f; /* Dark blue color */
+    background-color: #09003f;
     color: white;
     border: none;
     border-radius: 4px;
@@ -112,20 +155,21 @@ button {
 }
 
 button:hover {
-    background-color: #09003f; /* Darker blue on hover */
+    background-color: #09003f;
 }
 
-/* Output Box */
+/* Output styling */
 pre {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f4f4f4;
-    white-space: pre-wrap; /* Preserve whitespace formatting */
+    white-space: pre-wrap;
     text-align: left;
 }
 
+/* Success and error message styles */
 .success {
     color: green;
     font-weight: bold;
@@ -136,9 +180,9 @@ pre {
     font-weight: bold;
 }
 
-/* Footer */
+/* Footer styling */
 footer {
-    background-color: #09003f; /* Dark blue color for footer */
+    background-color: #09003f;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -147,6 +191,7 @@ footer {
     bottom: 0;
 }
 
+/* Social icons styling */
 .social-icons {
     margin-top: 10px;
 }
@@ -158,10 +203,35 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #ddd;
+    color: #ff5f1f;
 }
 
-/* Responsive Design */
+/* Buy Me A Coffee button styling */
+#buymeacoffee {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #ff5f1f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    width: auto;
+    transition: background-color 0.3s ease;
+}
+
+#buymeacoffee i {
+    margin-right: 8px;
+}
+
+#buymeacoffee:hover {
+    background-color: #ff8c1f;
+}
+
+/* Media query for responsiveness */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -179,6 +249,6 @@ footer {
     }
 
     .editor {
-        height: 200px; /* Reduced height for smaller screens */
+        height: 200px;
     }
 }

@@ -17,11 +17,14 @@ BansiCo YAML Linter is a simple web-based tool for validating and linting YAML c
 2. Click the "Lint YAML" button.
 3. View the validation results below the button.
 
+## Access Application
+[YAML LInter](https://yaml-linter.vercel.app/)
+
 ## License
 &copy; 2025 Bansikah. All rights reserved.
 
 ## Social Links
 - [GitHub](https://github.com/bansikah22)
-- [GitLab](https://gitlab.com/bansikah22)
-- [LinkedIn](https://www.linkedin.com/in/bansikah22)
-- [DEV Community](https://dev.to/bansikah22)
+- [GitLab](https://gitlab.com/tandapnoelbansikah/)
+- [LinkedIn](https://www.linkedin.com/in/tandap-noel-bansikah/)
+- [DEV Community](https://dev.to/bansikah)
