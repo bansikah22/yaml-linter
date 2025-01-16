@@ -49,3 +49,12 @@ if (storedCode) {
 yamlInput.addEventListener('input', function() {
     localStorage.setItem('yamlCode', yamlInput.value); // Save code to localStorage
 });
+
+
+document.getElementById('toggle-btn').addEventListener('click', function () {
+    const navLinks = document.querySelector('.nav-links');
+    const toggleButton = document.querySelector('.toggle-button');
+
+    navLinks.classList.toggle('active'); // Toggle nav visibility
+    toggleButton.classList.toggle('active'); // Toggle hamburger animation
+});

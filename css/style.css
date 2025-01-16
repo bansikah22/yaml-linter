@@ -78,11 +78,12 @@ header {
     font-size: 1.1em;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-family: 'Dancing Script', cursive;
 }
 
 .cta-button:hover {
     color: #fff;
-    background-color: #ff8c1f; /* Lighter orange on hover */
+    background-color: #fff; /* Lighter orange on hover */
 }
 
 /* Main content styling */
@@ -231,6 +232,60 @@ footer {
     background-color: #ff8c1f;
 }
 
+/* Hamburger menu icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* When the hamburger is clicked */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 7px;
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 7px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .nav-links {
@@ -246,7 +301,7 @@ footer {
         font-size: 1em;
         padding: 10px 20px;
     }
-    
+
     .content {
         padding: 10px;
         max-width: 100%;
