@@ -236,13 +236,17 @@ footer {
     .nav-links {
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
     }
 
     .nav-links li {
         margin-bottom: 10px;
     }
 
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    
     .content {
         padding: 10px;
         max-width: 100%;
